@@ -1,0 +1,42 @@
+PokerStars Zoom Hand #168427376241:  Hold'em No Limit (5000/10000) - 2017/04/01 19:47:27 CET [2017/04/01 13:47:27 ET]
+Table 'NLHE 5K/10K 6 Max' 6-max Seat #1 is the button
+Seat 1: tereza50 (308200 in chips)
+Seat 2: renu52 (1005000 in chips)
+Seat 3: Syn0815 (1000000 in chips)
+Seat 4: Betrae44 (1792500 in chips)
+Seat 5: cisszike515 (3185940 in chips)
+Seat 6: milan882 (1016680 in chips)
+renu52: posts small blind 5000
+Syn0815: posts big blind 10000
+*** HOLE CARDS ***
+Dealt to Syn0815 [Ad 7d]
+Betrae44: folds
+cisszike515: folds
+milan882: folds
+tereza50: folds
+renu52: raises 10000 to 20000
+Syn0815: calls 10000
+*** FLOP *** [4h 6d Kd]
+renu52: bets 10000
+Syn0815: raises 34920 to 44920
+renu52: calls 34920
+*** TURN *** [4h 6d Kd] [6c]
+renu52: bets 10000
+Syn0815: raises 63360 to 73360
+renu52: calls 63360
+*** RIVER *** [4h 6d Kd 6c] [Qd]
+renu52: bets 10000
+Syn0815: raises 204550 to 214550
+renu52: folds
+Uncalled bet (204550) returned to Syn0815
+Syn0815 collected 283210 from pot
+Syn0815: doesn't show hand
+*** SUMMARY ***
+Total pot 296560 | Rake 13350
+Board [4h 6d Kd 6c Qd]
+Seat 1: tereza50 (button) folded before Flop (didn't bet)
+Seat 2: renu52 (small blind) folded on the River
+Seat 3: Syn0815 (big blind) collected (283210)
+Seat 4: Betrae44 folded before Flop (didn't bet)
+Seat 5: cisszike515 folded before Flop (didn't bet)
+Seat 6: milan882 folded before Flop (didn't bet)

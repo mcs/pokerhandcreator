@@ -46,8 +46,8 @@ app.use(function(err, req, res, next) {
 });
 
 // TODO : remove temporarly testing code
-var testhand = require('./services/testhand');
-var Renderer = require('./services/pokerstarshandrenderer');
+const testhand = require('./test/testhand');
+const Renderer = require('./services/pokerstarshandrenderer');
 Renderer(testhand);
 
 module.exports = app;
