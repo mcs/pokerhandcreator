@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+    h1= title
+    p OK, #{playercount} players at the table.
+    p Blinds: #{smallblind} / #{bigblind} / #{ante}
+    p Now set the player details
+    form(action="/new_hand/3", method="POST")
+        table
+            thead
+                tr
+                    td Name
+                    td Stack
+                    td Button
+            tbody
+                tr
+                    td
+                        input(type="text", name="p1name", value="Player_1")
+                    td
+                        input(type="text", name="p1stack", value="1100")
+                    td
+                        input(type="radio", name="buttonpos", value="1")
+                tr
+                    td
+                        input(type="text", name="p2name", value="Player_2")
+                    td
+                        input(type="text", name="p2stack", value="1200")
+                    td
+                        input(type="radio", name="buttonpos", value="2")
+
+        input(type="submit", value="Submit")

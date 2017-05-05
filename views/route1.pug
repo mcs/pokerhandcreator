@@ -1,8 +1,0 @@
-extends layout
-
-block content
-    h1= title
-    p How many players are at the table?
-    form(action="/playercount", method="POST")
-        input(type="text", title="Player count", name="playercount", value="9")
-        input(type="submit", value="Submit")

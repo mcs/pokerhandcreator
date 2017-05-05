@@ -3,9 +3,9 @@
     <envs>
       <env name="DEBUG" value="Pokerhanderfassung:*" />
     </envs>
-    <browser url="http://localhost:3000/" />
+    <browser start="true" url="http://localhost:3000/" />
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-      <browser url="http://localhost:3000/" />
+      <browser start="true" url="http://localhost:3000/" />
     </EXTENSION>
     <method />
   </configuration>

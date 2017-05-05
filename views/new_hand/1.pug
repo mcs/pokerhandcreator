@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    h1= title
+    p Enter general table data.
+    form(action="/new_hand/2", method="POST")
+        table
+            tr
+                td
+                    label(for="pcount") Players at the table:
+                td
+                    input(id="pcount", type="number", title="Player count", name="playercount", value="9")
+            tr
+                td
+                    label(for="smallblind") Small blind:
+                td
+                    input(id="smallblind", type="number", title="Small blind", name="smallblind", value="25")
+            tr
+                td
+                    label(for="bigblind") Big blind:
+                td
+                    input(id="bigblind", type="number", title="Player count", name="bigblind", value="50")
+            tr
+                td
+                    label(for="ante") Ante:
+                td
+                    input(id="ante", type="number", title="Player count", name="ante", value="0")
+        input(type="submit", value="Submit")
