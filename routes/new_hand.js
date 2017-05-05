@@ -7,16 +7,21 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/2', function(req, res, next) {
-    let playercount = req.body.playercount || "9";
-    let smallblind = req.body.smallblind;
-    let bigblind = req.body.bigblind;
-    let ante = req.body.ante;
+    let handinfo = req.body.handinfo;
+    console.log("Handinfo:", handinfo);
+    let playercount = handinfo.playercount || "9";
     res.render('new_hand/2', {
         title: 'Add more table information',
-        playercount: playercount,
-        smallblind: smallblind,
-        bigblind: bigblind,
-        ante: ante
+        handinfo: handinfo
+    });
+});
+
+router.post('/3', function(req, res, next) {
+    let handinfo = req.body.handinfo;
+    console.log("Handinfo:", handinfo);
+    res.render('new_hand/2', {
+        title: 'Add more table information',
+        handinfo: handinfo
     });
 });
 

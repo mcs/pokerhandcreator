@@ -2,30 +2,34 @@ extends ../layout
 
 block content
     h1= title
-    p OK, #{playercount} players at the table.
-    p Blinds: #{smallblind} / #{bigblind} / #{ante}
+    p OK, #{handinfo.playercount} players at the table.
+    p Blinds: #{handinfo.smallblind} / #{handinfo.bigblind} / #{handinfo.ante}
     p Now set the player details
     form(action="/new_hand/3", method="POST")
+        input(type="hidden", name="handinfo[playercount]", value=handinfo.playercount)
+        input(type="hidden", name="handinfo[smallblind]", value=handinfo.smallblind)
+        input(type="hidden", name="handinfo[bigblind]", value=handinfo.bigblind)
+        input(type="hidden", name="handinfo[ante]", value=handinfo.ante)
         table
             thead
                 tr
-                    td Name
-                    td Stack
-                    td Button
+                    td Name?
+                    td Stack?
+                    td Button?
             tbody
                 tr
                     td
-                        input(type="text", name="p1name", value="Player_1")
+                        input(type="text", name="handinfo[players][0][name]", value="Player_1")
                     td
-                        input(type="text", name="p1stack", value="1100")
+                        input(type="text", name="handinfo[players][0][stack]", value="1100")
                     td
-                        input(type="radio", name="buttonpos", value="1")
+                        input(type="radio", name="handinfo[buttonpos]", value="1", checked=handinfo.buttonpos==1)
                 tr
                     td
-                        input(type="text", name="p2name", value="Player_2")
+                        input(type="text", name="handinfo[players][1][name]", value="Player_2")
                     td
-                        input(type="text", name="p2stack", value="1200")
+                        input(type="text", name="handinfo[players][1][stack]", value="1200")
                     td
-                        input(type="radio", name="buttonpos", value="2")
+                        input(type="radio", name="handinfo[buttonpos]", value="2", checked=handinfo.buttonpos==2)
 
         input(type="submit", value="Submit")
