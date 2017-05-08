@@ -29,7 +29,7 @@ function render(hand) {
     result.appendLine(`Table 'Eltigen' ${playercount}-max Seat #${hand.buttonpos} is the button`);
 
     for (let i = 0; i < playercount; i += 1) {
-        result.appendLine(`Seat ${i+1}: ${hand.players[i].name} (${hand.players[i].stack} in chips)`);
+        result.appendLine(`Seat ${i + 1}: ${hand.players[i].name} (${hand.players[i].stack} in chips)`);
     }
 
     result.appendLine(`${hand.players[seatToArrayIdx(hand.buttonpos + 1)].name}: posts small blind ${hand.smallblind}`);
@@ -43,20 +43,13 @@ function render(hand) {
     let currentPlayerIdx = seatToArrayIdx(hand.buttonpos + 3); // UTG
 
 
-
-
-
-
     // *** FLOP ***
-
 
 
     // *** TURN ***
 
 
-
     // *** RIVER ***
-
 
 
     // *** SUMMARY ***
@@ -66,6 +59,7 @@ function render(hand) {
     console.log(result.toString());
     console.log("------------");
 
+    return result.toString();
 }
 
 module.exports = render;

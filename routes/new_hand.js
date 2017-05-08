@@ -20,10 +20,11 @@ router.post('/2', function(req, res, next) {
 router.post('/3', function(req, res, next) {
     let handinfo = req.body.handinfo;
     console.log("Handinfo:", handinfo);
-    pokerstarshandrenderer(handinfo);
+    let logResult = pokerstarshandrenderer(handinfo);
     res.render('new_hand/3', {
         title: 'Add more table information',
-        handinfo: handinfo
+        handinfo: handinfo,
+        logResult: logResult
     });
 });
 
