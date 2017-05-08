@@ -5,17 +5,17 @@ module.exports = {
         iso: "",
         short: ""
     },
-    button_position: 1,
-    hero_position: 3,
+    buttonpos: 1,
+    heropos: 3,
     players: [
-        {nick: "tereza50", chips: 20000},
-        {nick: "renu52", chips: 10000},
-        {nick: "Syn0815", chips: 15000, cards: "Ad 7d"},
-        {nick: "Betrae44", chips: 25000},
-        {nick: "cisszike515", chips: 1000},
-        {nick: "milan882", chips: 35000}
+        {name: "tereza50", stack: 20000},
+        {name: "renu52", stack: 10000},
+        {name: "Syn0815", stack: 15000, cards: "Ad 7d"},
+        {name: "Betrae44", stack: 25000},
+        {name: "cisszike515", stack: 1000},
+        {name: "milan882", stack: 35000}
     ],
     preflop: [
-        {nick: "Betrae44", action: "FOLD"}
+        {name: "Betrae44", action: "FOLD"}
     ]
 };

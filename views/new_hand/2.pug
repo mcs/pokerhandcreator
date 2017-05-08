@@ -16,6 +16,7 @@ block content
                     td Name?
                     td Stack?
                     td Button?
+                    td Hero?
             tbody
                 - var count = Number.parseInt(handinfo.playercount, 10);
                 - var i = 0;
@@ -26,5 +27,8 @@ block content
                         td
                             input(type="text", name="handinfo[players][" + i + "][stack]", value=handinfo.players && handinfo.players[i] ? handinfo.players[i].stack : handinfo.bigblind + "00")
                         td
-                            input(type="radio", name="handinfo[buttonpos]", value=(i + 1), checked=handinfo.buttonpos == (++i))
+                            input(type="radio", name="handinfo[buttonpos]", value=(i + 1), checked=handinfo.buttonpos == (i + 1))
+                        td
+                            input(type="radio", name="handinfo[heropos]", value=(i + 1), checked=handinfo.heropos == (i + 1))
+                    - i++
         input(type="submit", value="Submit")
