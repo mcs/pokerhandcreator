@@ -25,9 +25,9 @@ block content
                 while i < count
                     tr
                         td
-                            input(type="text", name="handinfo[players][" + i + "][name]", value=handinfo.players && handinfo.players[i] ? handinfo.players[i].name : "Player_" + (i + 1))
+                            input(type="text", name="handinfo[players][" + i + "][name]", value=handinfo.players[i].name)
                         td
-                            input(type="text", name="handinfo[players][" + i + "][stack]", value=handinfo.players && handinfo.players[i] ? handinfo.players[i].stack : handinfo.bigblind + "00")
+                            input(type="text", name="handinfo[players][" + i + "][stack]", value=handinfo.players[i].stack)
                         td
                             input(type="radio", name="handinfo[buttonpos]", value=(i + 1), checked=handinfo.buttonpos == (i + 1))
                         td
