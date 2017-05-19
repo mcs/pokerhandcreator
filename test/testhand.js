@@ -8,14 +8,20 @@ module.exports = {
     buttonpos: 1,
     heropos: 3,
     players: [
-        {name: "tereza50", stack: 20000},
-        {name: "renu52", stack: 10000},
-        {name: "Syn0815", stack: 15000, cards: "Ad 7d"},
-        {name: "Betrae44", stack: 25000},
-        {name: "cisszike515", stack: 1000},
-        {name: "milan882", stack: 35000}
+        {name: "aaa", stack: 20000},
+        {name: "bbb", stack: 10000},
+        {name: "syn", stack: 15000, cards: "Ad 7d"},
+        {name: "ddd", stack: 25000},
+        {name: "eee", stack: 1000},
+        {name: "fff", stack: 35000}
     ],
     preflop: [
-        {name: "Betrae44", action: "FOLD"}
+        {name: "ddd", action: "FOLD"},
+        {name: "eee", action: "CALL", amount: "10000"},
+        {name: "fff", action: "RAISE", raise: "18000", amount: "28000"},
+        {name: "aaa", action: "CALL", amount: "28000"},
+        {name: "bbb", action: "FOLD"},
+        {name: "syn", action: "CALL", amount: "18000"},
+        {name: "eee", action: "CALL", amount: "18000"}
     ]
 };

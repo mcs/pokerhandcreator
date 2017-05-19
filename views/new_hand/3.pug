@@ -1,6 +1,9 @@
 extends ../layout
 
 block content
+    h1 Log-Result
+    pre= logResult
+    hr
     h1= title
     p OK, #{handinfo.playercount} players at the table.
     p Blinds: #{handinfo.smallblind} / #{handinfo.bigblind} / #{handinfo.ante}
@@ -32,6 +35,3 @@ block content
                             input(type="radio", name="handinfo[heropos]", value=(i + 1), checked=handinfo.heropos == (i + 1))
                     - i++
         input(type="submit", value="Submit")
-    hr
-    h1 Log-Result
-    pre= logResult

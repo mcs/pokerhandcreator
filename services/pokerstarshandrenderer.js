@@ -44,6 +44,22 @@ function render(hand) {
 
 
     // *** FLOP ***
+    if (hand.preflop) {
+        for (let i = 0; i < hand.preflop.length; i += 1) {
+            let cur = hand.preflop[i];
+            switch (cur.action) {
+                case "FOLD":
+                    result.appendLine(`${cur.name}: folds`);
+                    break;
+                case "CALL":
+                    result.appendLine(`${cur.name}: calls ${cur.amount}`);
+                    break;
+                case "RAISE":
+                    result.appendLine(`${cur.name}: raises ${cur.raise} to ${cur.amount}`);
+                    break;
+            }
+        }
+    }
 
 
     // *** TURN ***
