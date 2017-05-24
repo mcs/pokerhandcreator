@@ -1,19 +1,11 @@
-(function () {
-    var pokerhanderfassung = angular.module('pokerhanderfassung', []);
+'use strict';
 
-    // Define the `PhoneListController` controller on the `phonecatApp` module
-    pokerhanderfassung.controller('PokerhandController', function ($scope) {
-        $scope.phones = [
-            {
-                name: 'Nexus S',
-                snippet: 'Fast just got faster with Nexus S.'
-            }, {
-                name: 'Motorola XOOM™ with Wi-Fi',
-                snippet: 'The Next, Next Generation tablet.'
-            }, {
-                name: 'MOTOROLA XOOM™',
-                snippet: 'The Next, Next Generation tablet.'
-            }
-        ];
-    });
-})();
+// Declare app level module which depends on views, and components
+angular.module('pokerhanderfassung', [
+    'ngRoute',
+    'pokerhanderfassung.view1'])
+    .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+        $locationProvider.hashPrefix('!');
+
+        $routeProvider.otherwise({redirectTo: '/view1'});
+    }]);

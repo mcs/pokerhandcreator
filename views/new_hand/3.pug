@@ -8,11 +8,11 @@ block content
     p OK, #{handinfo.playercount} players at the table.
     p Blinds: #{handinfo.smallblind} / #{handinfo.bigblind} / #{handinfo.ante}
     p Now set the player details
-    form(action="/new_hand/3", method="POST")
-        input(type="hidden", name="handinfo[playercount]", value=handinfo.playercount)
-        input(type="hidden", name="handinfo[smallblind]", value=handinfo.smallblind)
-        input(type="hidden", name="handinfo[bigblind]", value=handinfo.bigblind)
-        input(type="hidden", name="handinfo[ante]", value=handinfo.ante)
+    form(action="/new_hand/3", method="POST", ng-controller="PokerhandController")
+        input(type="hidden", name="handinfo[playercount]", value=handinfo.playercount, ng-model="handinfo.playercount")
+        input(type="hidden", name="handinfo[smallblind]", value=handinfo.smallblind, ng-model="handinfo.smallblind")
+        input(type="hidden", name="handinfo[bigblind]", value=handinfo.bigblind, ng-model="handinfo.bigblind")
+        input(type="hidden", name="handinfo[ante]", value=handinfo.ante, ng-model="handinfo.ante")
         table
             thead
                 tr

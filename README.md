@@ -17,6 +17,7 @@ Currently I am just planning to support Texas Hold'em No-Limit.
 I am planning to use the following software stack:
 1. [Node.js](https://nodejs.org/)
 1. [Express](http://expressjs.com/)
+1. [AngularJS](https://angularjs.org/)
 1. [Docker](https://www.docker.com/)
 
 ## Off topic
