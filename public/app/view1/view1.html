@@ -1,4 +1,28 @@
-<p>This is the partial for view 1.</p>
-<ul>
-    <li ng-repeat="phone in phones">{{phone.name}}</li>
-</ul>
+<h2>Create new hand</h2>
+
+<p>Enter general table data.</p>
+
+<pre>handinfo = {{handinfo | json}}</pre>
+<form ng-submit="submit()">
+    <table>
+        <tbody>
+        <tr>
+            <td><label for="pcount">Players at the table:</label></td>
+            <td><input id="pcount" type="number" title="Player count" ng-model="handinfo.playercount" required="" min="1"></td>
+        </tr>
+        <tr>
+            <td><label for="smallblind">Small blind:</label></td>
+            <td><input id="smallblind" type="number" title="Small blind" ng-model="handinfo.smallblind" ng-change="updateBigBlind()" required="" min="0"></td>
+        </tr>
+        <tr>
+            <td><label for="bigblind">Big blind:</label></td>
+            <td><input id="bigblind" type="number" title="Player count" ng-model="handinfo.bigblind" required="" min="0"></td>
+        </tr>
+        <tr>
+            <td><label for="ante">Ante:</label></td>
+            <td><input id="ante" type="number" title="Player count" ng-model="handinfo.ante" required="" min="0"></td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Submit">
+</form>

@@ -7,8 +7,7 @@ const bodyParser = require('body-parser');
 const lessMiddleware = require('less-middleware');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
-const newHand = require('./routes/new_hand');
+const rest = require('./routes/rest');
 
 const app = express();
 
@@ -26,8 +25,7 @@ app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/new_hand', newHand);
+app.use('/rest', rest);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

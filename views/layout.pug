@@ -1,5 +1,5 @@
 doctype html
-html(ng-app='pokerhanderfassung')
+html(ng-app='pokerhanderfassung' ng-strict-di)
     head
         title= title
         link(rel='stylesheet', href='/stylesheets/style.css')
@@ -8,5 +8,7 @@ html(ng-app='pokerhanderfassung')
         script(src='/bower_components/angular-resource/angular-resource.js')
         script(src='/javascripts/app.js')
         script(src='/app/view1/view1.js')
+        script(src='/app/view2/view2.js')
+        script(src='/app/components/services.js')
     body
         block content

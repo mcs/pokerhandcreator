@@ -1,0 +1,30 @@
+<pre>handinfo = {{handinfo | json}}</pre>
+<h1>Add more table information</h1>
+<p>OK, {{handinfo.playercount}} players at the table.</p>
+<p>Blinds: {{handinfo.smallblind}} / {{handinfo.bigblind}} / {{handinfo.ante}}</p>
+<p>Now set the player details</p>
+<form ng-submit="submit()">
+    <table>
+        <thead>
+        <tr>
+            <td>Name?</td>
+            <td>Stack?</td>
+            <td>Button?</td>
+            <td>Hero?</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="player in handinfo.players">
+            <td><input type="text" ng-model="player.name"></td>
+            <td><input type="text" ng-model="player.stack" value="5000"></td>
+            <td><input type="radio" ng-model="handinfo.buttonpos" value="{{player.index}}"></td>
+            <td><input type="radio" ng-model="handinfo.heropos" value="{{player.index}}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Next">
+</form>
+
+<hr>
+
+<pre>{{logfile}}</pre>

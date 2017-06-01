@@ -1,4 +1,4 @@
-function render(hand) {
+function render(handinfo) {
 
     function Result() {
 
@@ -20,33 +20,36 @@ function render(hand) {
     }
 
     const result = new Result();
-    const playercount = hand.players.length;
+    const playercount = handinfo.players.length;
 
-    hand.currency = hand.currency || {short: "", iso: ""};
+    handinfo.currency = handinfo.currency || {short: "", iso: ""};
+    handinfo.buttonpos = parseInt(handinfo.buttonpos, 10);
+    handinfo.heropos = parseInt(handinfo.heropos, 10);
 
-    result.appendLine(`PokerStars Hand #156632473469:  Hold'em No Limit (${hand.currency.short}${hand.smallblind}/${hand.currency.short}${hand.bigblind}${hand.currency.iso ? " " + hand.currency.iso : ""}) - 2016/07/30 10:40:31 AT [2016/07/30 9:40:31 ET]`);
 
-    result.appendLine(`Table 'Eltigen' ${playercount}-max Seat #${hand.buttonpos} is the button`);
+    result.appendLine(`PokerStars Hand #156632473469:  Hold'em No Limit (${handinfo.currency.short}${handinfo.smallblind}/${handinfo.currency.short}${handinfo.bigblind}${handinfo.currency.iso ? " " + handinfo.currency.iso : ""}) - 2016/07/30 10:40:31 AT [2016/07/30 9:40:31 ET]`);
+
+    result.appendLine(`Table 'Eltigen' ${playercount}-max Seat #${handinfo.buttonpos} is the button`);
 
     for (let i = 0; i < playercount; i += 1) {
-        result.appendLine(`Seat ${i + 1}: ${hand.players[i].name} (${hand.players[i].stack} in chips)`);
+        result.appendLine(`Seat ${i + 1}: ${handinfo.players[i].name} (${handinfo.players[i].stack} in chips)`);
     }
 
-    result.appendLine(`${hand.players[seatToArrayIdx(hand.buttonpos + 1)].name}: posts small blind ${hand.smallblind}`);
-    result.appendLine(`${hand.players[seatToArrayIdx(hand.buttonpos + 2)].name}: posts big blind ${hand.bigblind}`);
+    result.appendLine(`${handinfo.players[seatToArrayIdx(handinfo.buttonpos + 1)].name}: posts small blind ${handinfo.smallblind}`);
+    result.appendLine(`${handinfo.players[seatToArrayIdx(handinfo.buttonpos + 2)].name}: posts big blind ${handinfo.bigblind}`);
 
 
     // *** HOLE CARDS ***
     result.appendLine("*** HOLE CARDS ***");
-    result.appendLine(`Dealt to ${hand.players[seatToArrayIdx(hand.heropos)].name} [${hand.players[seatToArrayIdx(hand.heropos)].cards}]`);
+    result.appendLine(`Dealt to ${handinfo.players[seatToArrayIdx(handinfo.heropos)].name} [${handinfo.players[seatToArrayIdx(handinfo.heropos)].cards}]`);
 
-    let currentPlayerIdx = seatToArrayIdx(hand.buttonpos + 3); // UTG
+    let currentPlayerIdx = seatToArrayIdx(handinfo.buttonpos + 3); // UTG
 
 
     // *** FLOP ***
-    if (hand.preflop) {
-        for (let i = 0; i < hand.preflop.length; i += 1) {
-            let cur = hand.preflop[i];
+    if (handinfo.preflop) {
+        for (let i = 0; i < handinfo.preflop.length; i += 1) {
+            let cur = handinfo.preflop[i];
             switch (cur.action) {
                 case "FOLD":
                     result.appendLine(`${cur.name}: folds`);
