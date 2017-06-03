@@ -41,7 +41,7 @@ function render(handinfo) {
 
     // *** HOLE CARDS ***
     result.appendLine("*** HOLE CARDS ***");
-    result.appendLine(`Dealt to ${handinfo.players[seatToArrayIdx(handinfo.heropos)].name} [${handinfo.players[seatToArrayIdx(handinfo.heropos)].cards}]`);
+    result.appendLine(`Dealt to ${handinfo.players[seatToArrayIdx(handinfo.heropos)].name} [${handinfo.players[seatToArrayIdx(handinfo.heropos)].cards.join(" ")}]`);
 
     let currentPlayerIdx = seatToArrayIdx(handinfo.buttonpos + 3); // UTG
 

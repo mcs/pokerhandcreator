@@ -12,6 +12,8 @@ angular
             smallblind: 25,
             bigblind: 50,
             ante: 0,
-            players: []
+            players: [],
+            buttonpos: 1,
+            heropos: 1
         };
     });

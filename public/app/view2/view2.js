@@ -12,8 +12,8 @@ angular
         "$scope", "$http", "$location", "handinfo",
         function ($scope, $http, $location, handinfo) {
             $scope.handinfo = handinfo;
+            $scope.cardPattern = "[2-9TJQKA][cshd]";
             $scope.submit = function () {
-//                $location.path("/view3");
                 $http
                     .post("/rest", handinfo)
                     .then(function (valObject) {
@@ -21,5 +21,4 @@ angular
                         $scope.logfile = content;
                     })
             };
-
         }]);

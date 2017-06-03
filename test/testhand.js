@@ -10,7 +10,7 @@ module.exports = {
     players: [
         {name: "aaa", stack: 20000},
         {name: "bbb", stack: 10000},
-        {name: "syn", stack: 15000, cards: "Ad 7d"},
+        {name: "syn", stack: 15000, cards: ["Ad", "7d"]},
         {name: "ddd", stack: 25000},
         {name: "eee", stack: 1000},
         {name: "fff", stack: 35000}
